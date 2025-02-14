@@ -27,6 +27,7 @@ nameForm?.addEventListener("submit", async (event) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*", // Allow CORS
       },
       body: JSON.stringify({ name }),
     });
