@@ -24,7 +24,7 @@ This exercise is intended to be 1-1.5 hours in duration. Please complete the fol
 
 Tasks:
 - Get the code running locally 
-    - These are simple components, but documentation is sparse and we've introduced a couple minor bugs in each
+    - These are simple components, but documentation is sparsecdand we've introduced a couple minor bugs in each
     - Update the Setup instructions below with steps to run frontend and backend
 - Utilizing Playwright (and optionally any additional unit-level or other tests you'd  like to add), set up initial testing in this repository to validate behavior of the frontend and backend (please spend no more than 1 hour on this step)
 - If you have time, build (or draft) a github action which would run your tests on any merge
@@ -38,14 +38,55 @@ Tasks:
 
 Documentation is somewhat sparse here intentionally. As you get the components running, please update instructions here wtih an improved set of instructions (and feel free to make updates to the repo itself for cleaner setup!).
 
+## Setup Project Dependencies
+
+**Python App**
+
+- Ensure you have [Python](https://www.python.org) installed.
+- Create a virtual environment with `python -m venv venv`.
+- Activate the virtual environment with `source venv/bin/activate` (or `venv\Scripts\activate` on Windows).
+- Install Flask with `pip install Flask`.
+- Install Flask-Cors with `pip install Flask-Cors`.
+
+**Frontend**
+
+- Ensure you have [Node.js](https://nodejs.org) installed.
+- Install HTTPie with `pip install httpie`.
+- Install http-server with `npm install -g http-server`.
+- Install Frontend: 
+   - Navigate to the frontend `simple-ts-ui` directory
+   - Install frontend dependencies with `npm install`.
+
+** Testing Dependencies **
+
+- Pytest is installed with `pip install pytest`.
+- Playwright is installed with `pip install pytest-playwright`.
+- Playwright dependencies are installed with `playwright install`.
+
 ## Run the Python app
-- You'll need to determine and install dependencies in a virtual environment
-- Run the app itself with `python app.py`
+- Run the app itself with `python app.py` from the project root directory.
 
 ## Run the frontend
-- You'll need to install npm and run `npm install`
-- frontend itself can be run with `http .` if you `npm install -g http-server`
-
+- The frontend itself can be run with `http .` (or `http-server .` on Windows) from the `simple-ts-ui` directory
 
 # Testing Approach
-Your approach here!
+
+## Playwright E2E Testing
+
+### API Testing
+
+These tests are going to focus on various data input validations performed and ensure that the API is responding as expected.
+
+To execute the test, run the following command from the project root directory `pytest tests/test_api.py`.
+
+### UI Testing
+
+These tests are going to focus on the UI components of the application. We will be testing the form input, submission, and the confirmation message.
+
+To execute the test, run the following command from the project root directory `pytest tests/test_ui.py`.
+
+## Github Action
+
+- **playwright.yml**:  This action will execute the Playwright tests on any merge to the main branch & any pull requests to the main branch.
+
+
