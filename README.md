@@ -45,13 +45,11 @@ Documentation is somewhat sparse here intentionally. As you get the components r
 - Ensure you have [Python](https://www.python.org) installed.
 - Create a virtual environment with `python -m venv venv`.
 - Activate the virtual environment with `source venv/bin/activate` (or `venv\Scripts\activate` on Windows).
-- Install Flask with `pip install Flask`.
-- Install Flask-Cors with `pip install Flask-Cors`.
+- Install Python dependencies with `pip install -r requirements.txt`.
 
 **Frontend**
 
 - Ensure you have [Node.js](https://nodejs.org) installed.
-- Install HTTPie with `pip install httpie`.
 - Install http-server with `npm install -g http-server`.
 - Install Frontend: 
    - Navigate to the frontend `simple-ts-ui` directory
@@ -59,8 +57,7 @@ Documentation is somewhat sparse here intentionally. As you get the components r
 
 ** Testing Dependencies **
 
-- Pytest is installed with `pip install pytest`.
-- Playwright is installed with `pip install pytest-playwright`.
+- Python App Dependencies are installed.
 - Playwright dependencies are installed with `playwright install`.
 
 ## Run the Python app
@@ -88,3 +85,5 @@ To execute the test, run the following command from the project root directory `
 ## Github Action
 
 - **playwright.yml**:  This action will execute the Playwright tests on any merge to the main branch & any pull requests to the main branch.
+  - Currently, fails due to needing to stand up the app in the frontend. This is a good next step to get the tests running in CI/CD.
+
