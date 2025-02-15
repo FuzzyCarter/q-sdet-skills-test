@@ -88,5 +88,3 @@ To execute the test, run the following command from the project root directory `
 ## Github Action
 
 - **playwright.yml**:  This action will execute the Playwright tests on any merge to the main branch & any pull requests to the main branch.
-
-
